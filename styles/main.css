@@ -65,6 +65,7 @@ section {
     right: 0;
     z-index: 10;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
@@ -79,8 +80,16 @@ section {
 }
 
 .logo img {
-    height: 56px;
-    width: auto
+    display: block;
+    width: 80px;
+    height: 80px;
+    max-width: none;
+    flex: none;
+    object-fit: contain;
+}
+
+.header .logo {
+    flex: 0 0 80px;
 }
 
 nav {
@@ -314,8 +323,11 @@ nav a:hover {
 }
 
 .footer img {
-    height: 48px;
-    width: auto;
+    width: 88px;
+    height: 88px;
+    max-width: none;
+    flex: none;
+    object-fit: contain;
     margin-bottom: .5rem
 }
 
