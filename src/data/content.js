@@ -26,7 +26,7 @@ window.CONTENT = {
   },
   hero: {
     eyebrow: 'Barragon Garage',
-    title: 'Oficina de motas, feita com rigor',
+    title: 'Oficina',
     body: 'Diagnóstico claro, trabalho técnico e a moto de volta à estrada. Sem rodeios.',
   },
   footer: { copy: '© 2026 Barragon Garage.' },
