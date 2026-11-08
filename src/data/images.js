@@ -4,7 +4,7 @@ const ASSET = (file) => `img/${file}`;
 window.IMAGES = {
   logo: {
     src: ASSET("logo.png"),
-    alt: "Logótipo Barragon Garage — Peças e Reparações desde 1990",
+    alt: "Logótipo da Barragon Garage",
   },
   hero: {
     src: ASSET("hero-workshop-interior.jpg"),
@@ -22,9 +22,5 @@ window.IMAGES = {
   chrome: {
     src: ASSET("chrome-tank-detail.jpg"),
     alt: "Pormenor de um escape cromado junto a um depósito escuro com pintura laranja",
-  },
-  bench: {
-    src: ASSET("hero-workshop-interior.jpg"),
-    alt: "Interior da oficina com uma mota no elevador",
   },
 };

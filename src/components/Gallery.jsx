@@ -22,20 +22,22 @@ function GalleryTile({ img, pos, cls, delay }) {
 
 function Gallery() {
   const I = window.IMAGES;
-  // same photo at most twice, never adjacent; repeats use different crops
   const tiles = [
-    { img: I.exterior, pos: '51% 48%', cls: 't-big' },
-    { img: I.chrome, pos: '30% 40%', cls: '' },
-    { img: I.bench, pos: '25% 50%', cls: '' },
-    { img: I.lift, pos: '55% 52%', cls: 't-wide' },
-    { img: I.chrome, pos: '75% 55%', cls: 't-wide' },
-    { img: I.bench, pos: '80% 50%', cls: 't-wide' },
+    { img: I.exterior, pos: '52% 50%', cls: 'tile-tall', number: '01' },
+    { img: I.lift, pos: '55% 52%', cls: '', number: '02' },
+    { img: I.chrome, pos: '72% 54%', cls: 'tile-wide', number: '03' },
   ];
   return (
-    <section className="gallery" id="galeria" aria-label="Galeria">
-      <div className="wall">
+    <section className="gallery" id="galeria">
+      <div className="gallery-heading">
+        <p className="section-label">
+          <span>03</span><span className="section-label-line" aria-hidden="true"></span>Galeria
+        </p>
+        <h2>Um olhar sobre<br /><span>a oficina.</span></h2>
+      </div>
+      <div className="wall" role="group" aria-label="Fotografias da oficina e dos trabalhos">
         {tiles.map((t, i) => (
-          <GalleryTile key={i} img={t.img} pos={t.pos} cls={t.cls} delay={i * 90} />
+          <GalleryTile key={t.number} img={t.img} pos={t.pos} cls={t.cls} delay={i * 90} />
         ))}
       </div>
     </section>

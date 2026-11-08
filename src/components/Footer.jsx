@@ -1,18 +1,18 @@
 /** @jsxRuntime classic */
 /** @jsx React.createElement */
 function Footer() {
-  const { footer, nav, links } = window.CONTENT;
+  const { footer, nav } = window.CONTENT;
   const logo = window.IMAGES.logo;
   return (
     <footer className="footer">
-      <div>
-        <img src={logo.src} alt={logo.alt} />
+      <div className="footer-brand">
+        <a href="#top" aria-label="Barragon Garage — início"><img src={logo.src} alt={logo.alt} /></a>
         <p>{footer.copy}</p>
       </div>
-      <nav>
+      <nav aria-label="Navegação de rodapé">
         {nav.map((n) => <a key={n.href} href={n.href}>{n.label}</a>)}
       </nav>
-      <SocialIcons />
+      <SocialIcons className="footer-social" />
     </footer>
   );
 }
