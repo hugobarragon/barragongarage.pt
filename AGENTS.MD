@@ -77,6 +77,18 @@ Rules the owner has asked for so far. Follow them. Write these rules in English;
 - All site copy is pt-PT. The site name "Barragon Garage" should appear in title and OG tags.
 - Do not invent business details (address, hours, phone numbers not in contact.js) for meta tags.
 
+## Google
+
+- Google Search Console: verify the domain and submit sitemap when available.
+- Google Business Profile: ensure the listing matches the site (name, phone, category).
+- Mobile-first indexing: all critical content must be in the HTML, not loaded by JS.
+- Structured data: use `AutoRepair` or `LocalBusiness` schema in index.html `<head>`. Include name, description, telephone, url, image, and sameAs (social links). Never rely on JS to inject JSON-LD — Google may miss it.
+- Sitemap: add `sitemap.xml` in the root when the site grows beyond one page.
+- Robots: use `index, follow` by default. No `noindex` or `nofollow` unless intentional.
+- Canonical: always set a canonical URL to avoid duplicate content.
+- Open Graph and Twitter Card: include on every page for social sharing previews.
+- Core Web Vitals: keep fonts, images, and scripts optimized. Avoid layout shift.
+
 ## Process
 
 - No invented facts, including names, addresses, hours, prices, services, or business history.
