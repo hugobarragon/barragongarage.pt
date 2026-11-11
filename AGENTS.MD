@@ -27,7 +27,9 @@ Rules the owner has asked for so far. Follow them. Write these rules in English;
 - Scripts are plain `type="text/babel"` with window globals. No import/export.
 - Classic JSX pragmas at top of each JSX file: `/** @jsxRuntime classic */ /** @jsx React.createElement */`.
 - Scripts listed in dependency order in index.html.
-- index.html stays minimal: root div, CDN scripts, stylesheet, fonts.
+- index.html stays minimal: root div, CDN scripts, stylesheet, fonts. No inline CSS, JS, or JSON-LD.
+- SEO meta tags (title, description, OG, Twitter) live in index.html `<head>`. Structured data (JSON-LD) is inline in index.html.
+- HTML files must contain only HTML structure. CSS goes in styles/, JS goes in src/, images go in img/. No inline styles, scripts, or data URIs.
 
 ## Repo layout
 
@@ -52,19 +54,28 @@ Rules the owner has asked for so far. Follow them. Write these rules in English;
 - Keep a single-page structure with navigation, hero, introduction, services, featured work/gallery, about, social media, and footer/contact.
 - Give each section a distinct purpose; avoid repeating taglines or calls to action across the hero, introduction, gallery, and social sections.
 - Use the hero to communicate the workshop's character immediately with authentic photography and clear, concise copy.
-- Present services so they are easy to scan. P1's suggested categories and copy are examples, not verified claims; confirm new services before publishing.
+- Present services so they are easy to scan. The suggested categories and copy are examples, not verified claims; confirm new services before publishing.
 - Owner-confirmed scope: the workshop works with all brands and types of motorcycles (including high-displacement, carburettor, modern, and motocross bikes, plus custom preparations) and specialises in Portuguese mopeds such as Famel, Casal, and other historic marques.
 - The owner has confirmed the broad service categories in `src/data/content.js`; do not add more specific capabilities without confirmation.
 - Make the gallery image-led, using authentic workshop photography in an asymmetrical editorial composition. Preserve useful alt text and avoid repeating visible photos. A lightweight accessible lightbox is optional.
 - Use the social section to invite visitors to follow the verified Instagram and Facebook profiles.
-- Treat all proposed copy in P1 as draft. Do not publish unverified claims about services, history, experience, awards, certifications, customers, or team size.
-- P1.md currently ends mid-section at “Optional Instagram”; do not infer missing requirements from the unfinished text.
+- Treat all proposed copy as draft. Do not publish unverified claims about services, history, experience, awards, certifications, customers, or team size.
 
 ## Images
 
 - Pictures are library assets served at `-/asset/<storage id>/<hash>`.
 - A real images/ folder was requested but needs the files uploaded to the repo (tools cannot copy bytes). When images are in images/, reference them from src/data/images.js only.
 - Prefer authentic Barragon Garage photography; do not use generic stock imagery as a substitute.
+- All image paths in src/data/images.js use `img/<file>` relative paths. The img/ folder contains: logo.png, hero-workshop-interior.jpg, workshop-exterior-dusk.jpg, frame-on-lift.jpg, chrome-tank-detail.jpg.
+- Favicon variants (favicon.ico, favicon-96x96.png, apple-touch-icon.png, site.webmanifest) live in img/favicon/.
+- All assets must be organised in subfolders inside img/: workshop photos in img/, favicons in img/favicon/. Never mix assets at the root of img/.
+
+## SEO & Meta
+
+- Primary meta tags (title, description, robots, canonical) live in index.html `<head>`.
+- Open Graph and Twitter Card meta tags go in index.html `<head>`. og:image should point to a real image URL.
+- All site copy is pt-PT. The site name "Barragon Garage" should appear in title and OG tags.
+- Do not invent business details (address, hours, phone numbers not in contact.js) for meta tags.
 
 ## Process
 
