@@ -1,0 +1,16 @@
+{
+  "name": "Barragon Garage",
+  "short_name": "Barragon",
+  "description": "Mecânica, restauros e motas personalizadas",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1C2541",
+  "theme_color": "#1C2541",
+  "icons": [
+    {
+      "src": "/favicon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    }
+  ]
+}
