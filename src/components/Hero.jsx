@@ -23,4 +23,3 @@ function Hero() {
     </section>
   );
 }
-window.Hero = Hero;

@@ -43,4 +43,3 @@ function Gallery() {
     </section>
   );
 }
-window.Gallery = Gallery;

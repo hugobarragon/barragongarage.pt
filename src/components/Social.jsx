@@ -23,4 +23,3 @@ function SocialIcons({ className }) {
     </span>
   );
 }
-window.SocialIcons = SocialIcons;

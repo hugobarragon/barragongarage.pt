@@ -43,4 +43,3 @@ function Header() {
     </header>
   );
 }
-window.Header = Header;

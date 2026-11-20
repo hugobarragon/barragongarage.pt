@@ -16,4 +16,3 @@ function Footer() {
     </footer>
   );
 }
-window.Footer = Footer;

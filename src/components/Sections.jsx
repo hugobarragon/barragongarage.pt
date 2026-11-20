@@ -87,7 +87,3 @@ function Social() {
     </section>
   );
 }
-window.About = About;
-window.Services = Services;
-window.Introduction = Introduction;
-window.Social = Social;
