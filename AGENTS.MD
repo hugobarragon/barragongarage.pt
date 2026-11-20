@@ -23,8 +23,8 @@ Rules the owner has asked for so far. Follow them. Write these rules in English;
 
 ## Stack
 
-- React + JSX with NO build pipeline: React 18, ReactDOM and Babel standalone from CDNs.
-- Scripts are plain `type="text/babel"` with window globals. No import/export.
+- Preact 10 + compat and Sucrase 3.35.1 from esm.sh; `src/loader.js` compiles and runs JSX in-browser, no build pipeline.
+- Scripts use `type="text/jsx"` with window globals. No import/export.
 - Classic JSX pragmas at top of each JSX file: `/** @jsxRuntime classic */ /** @jsx React.createElement */`.
 - Scripts listed in dependency order in index.html.
 - index.html stays minimal: root div, CDN scripts, stylesheet, fonts. No inline CSS, JS, or JSON-LD.
@@ -35,7 +35,7 @@ Rules the owner has asked for so far. Follow them. Write these rules in English;
 
 - index.html
 - styles/main.css
-- src/main.jsx, src/App.jsx
+- src/main.jsx, src/App.jsx, src/loader.js
 - src/components/: Header, Hero, Sections (Services, About), Gallery, Social, Footer
 - src/data/content.js (copy) and src/data/images.js (picture URLs and alt text)
 - src/config/contact.js (contacts and social links)
@@ -93,4 +93,4 @@ Rules the owner has asked for so far. Follow them. Write these rules in English;
 
 - No invented facts, including names, addresses, hours, prices, services, or business history.
 - Small targeted edits.
-- Verify in the preview (snapshot + console); only the Babel in-browser warning is acceptable.
+- Verify in the preview (snapshot + console); console must be clean.
